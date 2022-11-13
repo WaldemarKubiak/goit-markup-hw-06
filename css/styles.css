@@ -13,6 +13,8 @@
   --background-primary-color: #fff;
   --background-secondary-color: #2f303a;
   --background-tertiary-color: #f5f4fa;
+  --button-primary-color: #2196f3;
+  --button-secondary-color: #f5f4fa;
   --brand-primary-color: #2196f3;
   --brand-dark-color: #000;
   --brand-light-color: #fff;
@@ -28,6 +30,7 @@
   --eicon-bcg-secondary-color: #ffffff1a;
   --eicon-accent-primary-color: #fff;
   --eicon-accent-bcg-primary-color: #2196f3;
+  --text-placeholder-primary-color: #ffffff99;
 }
 
 body {
@@ -248,7 +251,7 @@ p {
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--text-tertiary-color);
-  background-color: #2196f3;
+  background-color: var(--button-primary-color);
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -281,7 +284,7 @@ p {
   line-height: 1.62;
   letter-spacing: 0.03em;
   color: var(--text-primary-color);
-  background-color: #f5f4fa;
+  background-color: var(--button-secondary-color);
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -536,7 +539,7 @@ p {
 
 .footer-content-wrapper {
   display: flex;
-  gap: 70px;
+  /* gap: 70px; */
 }
 
 .footer-left-side {
@@ -601,8 +604,9 @@ p {
 
 /* footer eicons group */
 
-.footer-right-side {
+.footer-center-side {
   padding-top: 72px;
+  margin-left: 70px;
 }
 
 .header-five {
@@ -636,6 +640,65 @@ p {
 .footer-eicon-bcg:hover,
 .footer-eicon-bcg:focus {
   background-color: var(--eicon-accent-bcg-primary-color);
+}
+
+/* footer right side group - newsletter */
+
+.footer-right-side {
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 78px;
+  width: 570px;
+}
+
+/* email-input  newsletter labbel */
+
+.email-signup-newsletter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.email-input-newsletter {
+  width: 358px;
+  padding: 14px 16px;
+  border: 1px solid #ffffff4d;
+  filter: drop-shadow(0px 4px 4px #00000026);
+  border-radius: 4px;
+  outline: 0;
+  background-color: var(--background-secondary-color);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--text-placeholder-primary-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-input-newsletter:focus {
+  border-color: var(--accent-primary-color);
+}
+
+/* signup button */
+
+.button-signup-newsletter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 10px 27px 10px 42px;
+  gap: 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-primary-color);
+  box-shadow: 0px 4px 4px #00000026;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary-color);
+  fill: var(--background-primary-color);
+  cursor: pointer;
 }
 
 /* Modal Window */
